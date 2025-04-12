@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import CommentBoardExample from '@/components/CommentBoardExample'; // Import the example board
-
+import FaceBackgroundExample from '@/components/FaceBackgroundExample'; // Import the background example
 export default function Home() {
   const [count, setCount] = useState(0);
 
@@ -10,23 +10,26 @@ export default function Home() {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Comment Section</h1>
-      <CommentBoardExample />
-      <div className="mt-8">
-        <h2 className="text-xl mb-2">Counter Example</h2>
-        <button
-          onClick={handleClick}
-          className="bg-blue-500
-            hover:bg-blue-700
-            text-white
-            font-bold
-            py-2 px-4
-            rounded"
-        >
-          Button clicked {count} times
-        </button>
-      </div>
-    </div>
+    <main className="relative min-h-screen">
+      <FaceBackgroundExample /> {/* Add the background */} 
+      <div className="container mx-auto p-4 relative z-10"> {/* Ensure content is above background */}
+        <h1 className="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">Comment Section</h1>
+        <CommentBoardExample />
+        <div className="mt-8">
+          <h2 className="text-xl mb-2 text-gray-800 dark:text-gray-100">Counter Example</h2>
+          <button
+            onClick={handleClick}
+            className="bg-blue-500
+              hover:bg-blue-700
+              text-white
+              font-bold
+              py-2 px-4
+              rounded"
+          >
+            Button clicked {count} times
+          </button>
+        </div>
+        </div>
+    </main>
   );
 }
