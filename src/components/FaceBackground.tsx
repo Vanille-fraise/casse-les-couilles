@@ -67,10 +67,10 @@ const FaceBackground: React.FC<FaceBackgroundProps> = ({ imageUrls }) => {
                     <Image
                       src={url}
                       alt={`Background face ${rowIndex}-${index}`}
-                      layout="fill"
                       objectFit="cover"
                       className="opacity-80" // Slightly transparent
                       priority={rowIndex < 2} // Prioritize loading images in the first few rows
+                      fill
                     />
                   </div>
                 ))}
