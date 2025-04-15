@@ -1,14 +1,7 @@
 'use client';
-import { useState } from 'react';
 import CommentBoardExample from '@/components/CommentBoardExample'; // Import the example board
 import FaceBackgroundExample from '@/components/FaceBackgroundExample'; // Import the background example
 export default function Home() {
-
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => {
-    setCount(count + 1);
-  };
 
   return (
     <main className="relative min-h-screen">

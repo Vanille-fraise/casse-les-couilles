@@ -1,25 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { getAuth, EmailAuthProvider, GoogleAuthProvider, onAuthStateChanged, User } from "firebase/auth";
 import { app } from "@/firebase/config"; // Assuming your Firebase app instance is exported from here
 
 // Get the Firebase Auth instance
 const auth = getAuth(app);
 
-// Configure FirebaseUI.
-const uiConfig = {
-  // Popup signin flow rather than redirect flow.
-  signInFlow: "popup",
-  // We will display Google and Email as auth providers.
-  signInOptions: [
-    GoogleAuthProvider.PROVIDER_ID,
-    EmailAuthProvider.PROVIDER_ID,
-  ],
-  callbacks: {
-    // Avoid redirects after sign-in.
-    signInSuccessWithAuthResult: () => false,
-  },
-};
 
 function FirebaseAuth() {
   const [isSignedIn, setIsSignedIn] = useState(false); // Local signed-in state.
