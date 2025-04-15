@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import { getAuth, EmailAuthProvider, GoogleAuthProvider, onAuthStateChanged, User } from "firebase/auth";
 import { app } from "@/firebase/config"; // Assuming your Firebase app instance is exported from here
 
@@ -40,7 +39,6 @@ function FirebaseAuth() {
       <div>
         <h1>Connexion</h1>
         <p>Please sign-in:</p>
-        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={auth} />
       </div>
     );
   }
