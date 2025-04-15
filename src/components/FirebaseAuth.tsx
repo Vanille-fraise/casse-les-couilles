@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { app } from "@/firebase/config"; // Assuming your Firebase app instance is exported from here
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 // Get the Firebase Auth instance
 const auth = getAuth(app);
