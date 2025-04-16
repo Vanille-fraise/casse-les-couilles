@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Putainn",
-  description: "J'ai juré il me casse les couilles lui au taff",
+  description: "J'ai juré il me casse les couilles lui",
 };
 
 export default function RootLayout({
